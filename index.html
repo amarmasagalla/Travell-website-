@@ -14,10 +14,18 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
-        .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80');
+        .hero-slide {
+            position: absolute;
+            inset: 0;
             background-size: cover;
             background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out, transform 6s ease-out;
+            transform: scale(1.04);
+        }
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1);
         }
     </style>
 </head>
@@ -29,7 +37,6 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo + Brand Name -->
                 <a href="#home" class="flex items-center space-x-3">
-                    <!-- Make sure your logo file is saved as logo.jpeg in the same folder -->
                     <img src="logo.jpeg" alt="IAS Nine Wings Travels Logo" class="h-14 w-14 rounded-full object-contain border border-slate-200 bg-white shadow-sm">
                     <div class="leading-tight">
                         <span class="block text-lg sm:text-xl font-bold text-blue-900 tracking-tight">IAS <span class="text-amber-500">NINE WINGS</span></span>
@@ -70,9 +77,26 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-28 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center text-white">
+    <!-- Hero Section with Rotating Indian City Backgrounds -->
+    <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-slate-900">
+        <!-- Rotating Background Slides -->
+        <div id="hero-slides" class="absolute inset-0 z-0">
+            <!-- Slide 1: Agra (Taj Mahal) -->
+            <div class="hero-slide active" data-city="Taj Mahal, Agra" style="background-image: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80');"></div>
+            <!-- Slide 2: Delhi (India Gate) -->
+            <div class="hero-slide" data-city="India Gate, New Delhi" style="background-image: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1920&q=80');"></div>
+            <!-- Slide 3: Mumbai (Gateway of India) -->
+            <div class="hero-slide" data-city="Gateway of India, Mumbai" style="background-image: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1570168007204-dfb5288e858f?auto=format&fit=crop&w=1920&q=80');"></div>
+            <!-- Slide 4: Hyderabad (Charminar) -->
+            <div class="hero-slide" data-city="Charminar, Hyderabad" style="background-image: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1572445271230-a78b5944a659?auto=format&fit=crop&w=1920&q=80');"></div>
+            <!-- Slide 5: Chennai (Temple Gopuram) -->
+            <div class="hero-slide" data-city="Chennai &amp; Tamil Nadu" style="background-image: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1920&q=80');"></div>
+            <!-- Slide 6: Jaipur (Hawa Mahal) -->
+            <div class="hero-slide" data-city="Hawa Mahal, Jaipur" style="background-image: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1920&q=80');"></div>
+        </div>
+
+        <!-- Hero Foreground Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center text-white">
             <!-- Featured Circular Logo at Top of Landing Page -->
             <div class="flex justify-center mb-6">
                 <img src="logo.jpeg" alt="IAS Nine Wings Travels Logo" class="h-32 w-32 sm:h-36 sm:w-36 rounded-full object-contain bg-white p-1.5 shadow-2xl border-4 border-amber-400">
@@ -114,6 +138,22 @@
                         </button>
                     </div>
                 </form>
+            </div>
+
+            <!-- Live Rotating City Badge & Slide Dots -->
+            <div class="mt-8 flex flex-col items-center space-y-3">
+                <div class="inline-flex items-center space-x-2 bg-slate-950/60 backdrop-blur-sm border border-white/15 px-4 py-1.5 rounded-full text-xs text-slate-200">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i>
+                    <span>Currently Viewing: <strong id="current-city-label" class="text-white">Taj Mahal, Agra</strong></span>
+                </div>
+                <div id="slide-dots" class="flex space-x-2">
+                    <button type="button" aria-label="Slide 1" class="slide-dot w-6 h-2 rounded-full bg-amber-400 transition-all"></button>
+                    <button type="button" aria-label="Slide 2" class="slide-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
+                    <button type="button" aria-label="Slide 3" class="slide-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
+                    <button type="button" aria-label="Slide 4" class="slide-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
+                    <button type="button" aria-label="Slide 5" class="slide-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
+                    <button type="button" aria-label="Slide 6" class="slide-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
+                </div>
             </div>
         </div>
     </section>
@@ -474,6 +514,49 @@
 
     <!-- Scripts -->
     <script>
+        // Hero Background Image Rotator (Agra, Delhi, Mumbai, Hyderabad, Chennai, Jaipur)
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        const cityLabel = document.getElementById('current-city-label');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('w-2', 'bg-white/50');
+                    dot.classList.add('w-6', 'bg-amber-400');
+                } else {
+                    dot.classList.remove('w-6', 'bg-amber-400');
+                    dot.classList.add('w-2', 'bg-white/50');
+                }
+            });
+            if (cityLabel && slides[index]) {
+                cityLabel.textContent = slides[index].getAttribute('data-city');
+            }
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        if (slides.length > 0) {
+            slideInterval = setInterval(nextSlide, 4000);
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    slideInterval = setInterval(nextSlide, 4000);
+                });
+            });
+        }
+
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -483,7 +566,6 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Close mobile menu when a link is clicked
             document.querySelectorAll('.mobile-link').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
