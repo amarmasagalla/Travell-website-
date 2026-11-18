@@ -1,189 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ISA Travels | Car Rentals & Outstation Cabs</title>
-  <style>
-    :root { --primary: #0f4c81; --dark: #0a355c; --accent: #f59e0b; --bg: #f8fafc; --text: #1e293b; }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: var(--bg); color: var(--text); line-height: 1.6; }
-    header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 99; }
-    .nav { max-width: 1150px; margin: auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; }
-    .btn { background: var(--primary); color: #fff; padding: 0.6rem 1.1rem; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; }
-    .hero { background: linear-gradient(rgba(15,76,129,0.88), rgba(10,53,92,0.92)), url('https://unsplash.com') center/cover; color: #fff; padding: 3.5rem 1rem; }
-    .hero-grid { max-width: 1150px; margin: auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: center; }
-    .hero h1 { font-size: 2.3rem; margin-bottom: 1rem; }
-    .badges { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1rem; }
-    .badges span { background: rgba(255,255,255,0.18); padding: 0.35rem 0.8rem; border-radius: 20px; font-size: 0.85rem; }
-    .card-box { background: #fff; color: var(--text); padding: 1.8rem; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-    .card-box h2 { color: var(--primary); margin-bottom: 1rem; }
-    .fg { margin-bottom: 0.8rem; }
-    .fg label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.2rem; }
-    .fg input, .fg select { width: 100%; padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 5px; }
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
-    .submit-btn { width: 100%; background: var(--accent); color: #000; padding: 0.8rem; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; margin-top: 0.4rem; }
-    section { padding: 3.5rem 1rem; max-width: 1150px; margin: auto; }
-    .title { text-align: center; margin-bottom: 2rem; }
-    .title h2 { font-size: 1.9rem; color: var(--primary); }
-    .tabs { display: flex; justify-content: center; gap: 0.6rem; margin-bottom: 1.8rem; flex-wrap: wrap; }
-    .tab { padding: 0.5rem 1.2rem; border: 2px solid var(--primary); background: transparent; color: var(--primary); border-radius: 20px; font-weight: 600; cursor: pointer; }
-    .tab.active { background: var(--primary); color: #fff; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .car { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.07); }
-    .car img { width: 100%; height: 170px; object-fit: cover; }
-    .car-info { padding: 1.2rem; }
-    .tag { font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; }
-    .specs { display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748b; margin: 0.6rem 0; padding: 0.5rem 0; border-y: 1px solid #eee; }
-    .price { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.8rem; }
-    .box { background: #fff; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    footer { background: var(--dark); color: #cbd5e1; padding: 2.5rem 1rem; margin-top: 2rem; }
-    .f-grid { max-width: 1150px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
-    .wa-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
-    @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISA Travels | Explore the World With Confidence</title>
+    <!-- Tailwind CSS -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="nav">
-      <a href="#" class="logo">ISA <span>Travels</span></a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#fleet">Our Cars</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="tel:+919849150174" class="btn">📞 +91 9849150174</a>
-    </div>
-  </header>
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-  <div class="hero" id="home">
-    <div class="hero-grid">
-      <div>
-        <h1>Your Trusted Car Rental Partner – ISA Travels</h1>
-        <p>Safe, sanitized, and comfortable cars for Local Rides, Outstation Trips, and 24/7 Airport Transfers.</p>
-        <div class="badges">
-          <span>✔ Only Verified Cars</span>
-          <span>✔ Experienced Drivers</span>
-          <span>✔ 24/7 Support</span>
+    <!-- Navigation Bar -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <i class="fa-solid fa-plane-departure text-amber-500 text-2xl"></i>
+                    <span class="text-2xl font-bold text-slate-900 tracking-tight">ISA <span class="text-amber-500">Travels</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 font-medium text-slate-600">
+                    <a href="#home" class="hover:text-amber-500 transition">Home</a>
+                    <a href="#destinations" class="hover:text-amber-500 transition">Destinations</a>
+                    <a href="#packages" class="hover:text-amber-500 transition">Packages</a>
+                    <a href="#services" class="hover:text-amber-500 transition">Services</a>
+                    <a href="#contact" class="hover:text-amber-500 transition">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-2.5 rounded-full shadow-md transition">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-      </div>
 
-      <div class="card-box" id="book">
-        <h2>Book Your Car Instantly</h2>
-        <form id="bookForm">
-          <div class="fg">
-            <label>Select Car Model</label>
-            <select id="car">
-              <option value="Maruti Swift (Hatchback)">Maruti Swift - ₹14/km</option>
-              <option value="Maruti Dzire (Sedan)">Maruti Dzire - ₹16/km</option>
-              <option value="Maruti Ertiga (MUV)">Maruti Ertiga - ₹17/km</option>
-              <option value="Toyota Innova Crysta (SUV)">Innova Crysta - ₹18/km</option>
-            </select>
-          </div>
-          <div class="row">
-            <div class="fg"><label>Trip Type</label><select id="trip"><option>Local Ride</option><option>Outstation</option><option>Airport Drop</option></select></div>
-            <div class="fg"><label>Date</label><input type="date" id="date" required /></div>
-          </div>
-          <div class="row">
-            <div class="fg"><label>Pickup</label><input type="text" id="pickup" placeholder="Hyderabad" required /></div>
-            <div class="fg"><label>Drop</label><input type="text" id="drop" placeholder="Destination" required /></div>
-          </div>
-          <div class="fg"><label>Mobile Number</label><input type="tel" id="phone" placeholder="10-digit number" required /></div>
-          <button type="submit" class="submit-btn">Send Booking on WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <section id="fleet">
-    <div class="title"><h2>Our Available Cars</h2><p>Choose a car that fits your journey</p></div>
-    <div class="tabs">
-      <button class="tab active" onclick="filter('all', this)">All Cars</button>
-      <button class="tab" onclick="filter('hatch', this)">Hatchback</button>
-      <button class="tab" onclick="filter('sedan', this)">Sedan</button>
-      <button class="tab" onclick="filter('suv', this)">SUV / MUV</button>
-    </div>
-    <div class="grid">
-      <div class="car" data-cat="hatch">
-        <img src="https://unsplash.com" alt="Swift">
-        <div class="car-info">
-          <span class="tag">Hatchback</span><h3>Maruti Swift</h3>
-          <div class="specs"><span>👤 4+1</span><span>❄️ AC</span><span>🧳 2 Bags</span></div>
-          <div class="price">₹11 / km</div>
-          <button class="btn" style="width:100%" onclick="pickCar('Maruti Swift (Hatchback)')">Select & Book</button>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-amber-500 font-medium">Home</a>
+            <a href="#destinations" class="block py-2 text-slate-700 hover:text-amber-500 font-medium">Destinations</a>
+            <a href="#packages" class="block py-2 text-slate-700 hover:text-amber-500 font-medium">Packages</a>
+            <a href="#services" class="block py-2 text-slate-700 hover:text-amber-500 font-medium">Services</a>
+            <a href="#contact" class="block py-2 text-amber-500 font-semibold">Book Now</a>
         </div>
-      </div>
-      <div class="car" data-cat="sedan">
-        <img src="https://unsplash.com" alt="Dzire">
-        <div class="car-info">
-          <span class="tag">Sedan</span><h3>Maruti Swift Dzire</h3>
-          <div class="specs"><span>👤 4+1</span><span>❄️ AC</span><span>🧳 3 Bags</span></div>
-          <div class="price">₹12 / km</div>
-          <button class="btn" style="width:100%" onclick="pickCar('Maruti Dzire (Sedan)')">Select & Book</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center text-white">
+            <span class="uppercase tracking-widest text-amber-400 font-semibold text-sm mb-3 block">Your Trusted Travel Partner</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Discover Your Next Great <br class="hidden sm:inline"> Adventure With <span class="text-amber-400">ISA Travels</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto mb-10">
+                Tailor-made holiday packages, seamless flight bookings, visa assistance, and unforgettable global experiences curated just for you.
+            </p>
+
+            <!-- Quick Search Bar -->
+            <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-4xl mx-auto text-slate-800">
+                <form id="search-form" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+                    <div class="text-left px-2">
+                        <label class="block text-xs font-semibold text-slate-400 uppercase">Destination</label>
+                        <input type="text" placeholder="Where to?" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
+                    </div>
+                    <div class="text-left px-2 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0">
+                        <label class="block text-xs font-semibold text-slate-400 uppercase">Travel Date</label>
+                        <input type="date" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
+                    </div>
+                    <div class="text-left px-2 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0">
+                        <label class="block text-xs font-semibold text-slate-400 uppercase">Guests</label>
+                        <select class="w-full font-medium text-slate-700 focus:outline-none mt-1 bg-transparent">
+                            <option>1 Adult</option>
+                            <option selected>2 Adults</option>
+                            <option>Family (2 Adults, 2 Kids)</option>
+                            <option>Group (5+)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3.5 px-6 rounded-xl transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Explore</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
-      <div class="car" data-cat="suv">
-        <img src="https://unsplash.com" alt="Ertiga">
-        <div class="car-info">
-          <span class="tag">MUV</span><h3>Maruti Ertiga</h3>
-          <div class="specs"><span>👤 6+1</span><span>❄️ Dual AC</span><span>🧳 4 Bags</span></div>
-          <div class="price">₹15 / km</div>
-          <button class="btn" style="width:100%" onclick="pickCar('Maruti Ertiga (MUV)')">Select & Book</button>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section id="destinations" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+            <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Top Picks</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Popular Destinations</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Explore our most booked international and domestic getaways with exclusive seasonal deals.</p>
         </div>
-      </div>
-      <div class="car" data-cat="suv">
-        <img src="https://unsplash.com" alt="Innova">
-        <div class="car-info">
-          <span class="tag">Premium SUV</span><h3>Toyota Innova Crysta</h3>
-          <div class="specs"><span>👤 7+1</span><span>❄️ AC</span><span>🧳 5 Bags</span></div>
-          <div class="price">₹18 / km</div>
-          <button class="btn" style="width:100%" onclick="pickCar('Toyota Innova Crysta (SUV)')">Select & Book</button>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://unsplash.com" alt="Dubai" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">5 Days / 4 Nights</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Dubai, UAE</h3>
+                        <span class="text-amber-500 font-bold text-lg">$699</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Experience luxury shopping, desert safaris, and the iconic Burj Khalifa skyline.</p>
+                    <a href="#contact" class="text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                        Inquire Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://unsplash.com" alt="Bali" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">6 Days / 5 Nights</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Bali, Indonesia</h3>
+                        <span class="text-amber-500 font-bold text-lg">$799</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Tropical beaches, serene rice terraces, ancient temples, and private pool villas.</p>
+                    <a href="#contact" class="text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                        Inquire Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
+                <div class="relative h-64 overflow-hidden">
+
+              <!-- Contact & Booking Inquiry Section -->
+    <section id="contact" class="py-20 bg-amber-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-5">
+                <!-- Contact Info Side -->
+                <div class="bg-slate-900 text-white p-8 md:col-span-2 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3">Plan Your Trip</h3>
+                        <p class="text-slate-400 text-sm mb-8">Fill out the form and our ISA Travels specialists will get back to you within 2 hours.</p>
+                        
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                                <span>123 Travel Avenue, Suite 400, City Center</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-phone text-amber-400"></i>
+                                <span>+91 98765 43210</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-envelope text-amber-400"></i>
+                                <span>bookings@isatravels.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form Side -->
+                <div class="p-8 md:col-span-3">
+                    <form id="inquiry-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="full-name" class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                                <input id="full-name" type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Phone / WhatsApp</label>
+                                <input id="phone" type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                                <input id="email" type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="destination" class="block text-sm font-medium text-slate-700 mb-1">Preferred Destination</label>
+                                <input id="destination" type="text" placeholder="e.g., Dubai, Maldives, Europe" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="requirements" class="block text-sm font-medium text-slate-700 mb-1">Trip Details & Requirements</label>
+                            <textarea id="requirements" rows="3" placeholder="Tell us about your travel dates, number of travelers, or special requests..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl shadow-md transition">
+                            Send Inquiry
+                        </button>
+
+                        <p id="form-feedback" class="hidden text-emerald-600 text-sm font-medium text-center pt-2">
+                            Thank you! Your travel inquiry has been received by ISA Travels.
+                        </p>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="why">
-    <div class="title"><h2>Why Choose ISA Travels?</h2></div>
-    <div class="grid">
-      <div class="box"><h3>🕒 24/7 Service</h3><p>On-time pickup for airport & outstation trips.</p></div>
-      <div class="box"><h3>🛡️ Verified Drivers</h3><p>Experienced, polite, and licensed chauffeurs.</p></div>
-      <div class="box"><h3>✨ Clean Cars</h3><p>Sanitized and well-maintained vehicles.</p></div>
-      <div class="box"><h3>💰 Fair Pricing</h3><p>Transparent per-km billing with no hidden fees.</p></div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <i class="fa-solid fa-plane-departure text-amber-500 text-xl"></i>
+                <span class="text-xl font-bold text-white">ISA <span class="text-amber-500">Travels</span></span>
+            </div>
+            <p class="mb-4">Making your dream journeys simple, safe, and memorable.</p>
+            <p>&copy; 2026 ISA Travels. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <footer id="contact">
-    <div class="f-grid">
-      <div><h3>ISA Travels</h3><p>Dedicated car rental service for local & outstation travel.</p></div>
-      <div><h3>Contact Us</h3><p>📍 Hyderabad, Telangana</p><p>📞 +91 98765 43210</p></div>
-    </div>
-  </footer>
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-  <a href="https://wa.me" target="_blank" class="wa-btn">💬 WhatsApp</a>
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
-  <script>
-    function filter(cat, btn) {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.car').forEach(c => {
-        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
-      });
-    }
-    function pickCar(name) {
-      document.getElementById('car').value = name;
-      document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
-    }
-    document.getElementById('bookForm').onsubmit = function(e) {
-      e.preventDefault();
-      const msg = `Hello ISA Travels! Booking Request:%0ACar: ${car.value}%0ATrip: ${trip.value}%0ADate: ${date.value}%0APickup: ${pickup.value}%0ADrop: ${drop.value}%0APhone: ${phone.value}`;
-      window.open(`https://wa.me?text=${msg}`, '_blank');
-    };
-  </script>
+        // Quick Search Redirect to Contact Form
+        const searchForm = document.getElementById('search-form');
+        if (searchForm) {
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        // Inquiry Form Submission Feedback
+        const inquiryForm = document.getElementById('inquiry-form');
+        if (inquiryForm) {
+            inquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const feedback = document.getElementById('form-feedback');
+                feedback.classList.remove('hidden');
+                e.target.reset();
+            });
+        }
+    </script>
+
 </body>
 </html>
+        
