@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISA Travels | Explore Incredible India With Confidence</title>
+    <title>IAS NINE WINGS TRAVELS | Spiritual &amp; Touring Packages Across India</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for Icons -->
@@ -15,7 +15,7 @@
             font-family: 'Poppins', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -27,10 +27,14 @@
     <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <a href="#home" class="flex items-center space-x-2">
-                    <i class="fa-solid fa-plane-departure text-amber-500 text-2xl"></i>
-                    <span class="text-2xl font-bold text-slate-900 tracking-tight">ISA <span class="text-amber-500">Travels</span></span>
+                <!-- Logo + Brand Name -->
+                <a href="#home" class="flex items-center space-x-3">
+                    <!-- Make sure your logo file is saved as logo.jpg in the same folder -->
+                    <img src="logo.jpg" alt="IAS Nine Wings Travels Logo" class="h-14 w-14 rounded-full object-contain border border-slate-200 bg-white shadow-sm">
+                    <div class="leading-tight">
+                        <span class="block text-lg sm:text-xl font-bold text-blue-900 tracking-tight">IAS <span class="text-amber-500">NINE WINGS</span></span>
+                        <span class="block text-xs font-bold text-blue-900 tracking-widest">TRAVELS</span>
+                    </div>
                 </a>
 
                 <!-- Desktop Menu -->
@@ -67,14 +71,19 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-28 pb-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center text-white">
-            <span class="uppercase tracking-widest text-amber-400 font-semibold text-sm mb-3 block">Your Trusted Indian Travel Partner</span>
+            <!-- Featured Circular Logo at Top of Landing Page -->
+            <div class="flex justify-center mb-6">
+                <img src="logo.jpg" alt="IAS Nine Wings Travels Logo" class="h-32 w-32 sm:h-36 sm:w-36 rounded-full object-contain bg-white p-1.5 shadow-2xl border-4 border-amber-400">
+            </div>
+
+            <span class="uppercase tracking-widest text-amber-400 font-semibold text-sm mb-3 block">100% Domestic India Travel Specialists</span>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-                Explore the Beauty of <br class="hidden sm:inline"> Incredible India With <span class="text-amber-400">ISA Travels</span>
+                Sacred Pilgrimages &amp; Scenic <br class="hidden sm:inline"> Tours With <span class="text-amber-400">IAS Nine Wings Travels</span>
             </h1>
             <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto mb-10">
-                Tailor-made domestic holiday packages, seamless flight &amp; train bookings, comfortable outstation cabs, and unforgettable journeys across India.
+                From divine temple darshans in Varanasi &amp; Tirupati to breathtaking hill stations and royal palaces—experience Incredible India with complete comfort.
             </p>
 
             <!-- Quick Search Bar -->
@@ -82,7 +91,7 @@
                 <form id="search-form" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
                     <div class="text-left px-2">
                         <label for="search-destination" class="block text-xs font-semibold text-slate-400 uppercase">Destination in India</label>
-                        <input id="search-destination" type="text" placeholder="e.g., Kerala, Manali, Goa" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
+                        <input id="search-destination" type="text" placeholder="e.g., Varanasi, Tirupati, Kerala" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
                     </div>
                     <div class="text-left px-2 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0">
                         <label for="search-date" class="block text-xs font-semibold text-slate-400 uppercase">Travel Date</label>
@@ -94,6 +103,7 @@
                             <option>1 Adult</option>
                             <option selected>2 Adults</option>
                             <option>Family (2 Adults, 2 Kids)</option>
+                            <option>Senior Citizen Group</option>
                             <option>Group (5+)</option>
                         </select>
                     </div>
@@ -108,19 +118,91 @@
         </div>
     </section>
 
-    <!-- Popular Indian Destinations Section -->
+    <!-- Famous Indian Destinations Section (Spiritual & Touring) -->
     <section id="destinations" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-14">
-            <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Top Picks Across India</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Popular Destinations</h2>
-            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Discover our most booked domestic getaways from snow-capped Himalayas to serene southern backwaters.</p>
+            <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Explore India Only</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Famous Spiritual &amp; Touring Places</h2>
+            <p class="text-slate-500 mt-3 max-w-2xl mx-auto">Handpicked sacred temple towns and scenic holiday destinations across every corner of India.</p>
+        </div>
+
+        <!-- Spiritual & Pilgrimage Destinations Subheading -->
+        <div class="flex items-center space-x-3 mb-6">
+            <span class="bg-amber-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Spiritual &amp; Pilgrimage</span>
+            <div class="h-px bg-slate-200 flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Spiritual Card 1: Varanasi & Ayodhya -->
+            <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80" alt="Varanasi Ganga Aarti" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-slate-900/80 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">Spiritual</span>
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">4 Days / 3 Nights</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Varanasi &amp; Ayodhya, UP</h3>
+                        <span class="text-amber-500 font-bold text-lg">₹12,999</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Kashi Vishwanath Darshan, evening Dashashwamedh Ghat Ganga Aarti, Sarnath, and Shri Ram Janmabhoomi.</p>
+                    <a href="#contact" data-package="Varanasi & Ayodhya Spiritual Tour" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                        Inquire Darshan Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Spiritual Card 2: Tirupati Balaji -->
+            <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="South Indian Temple Architecture" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-slate-900/80 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">Spiritual</span>
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">3 Days / 2 Nights</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Tirupati Balaji, AP</h3>
+                        <span class="text-amber-500 font-bold text-lg">₹8,499</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Tirumala Sri Venkateswara Swamy Darshan assistance, Padmavathi Temple, and Sri Kalahasti Temple visit.</p>
+                    <a href="#contact" data-package="Tirupati Balaji Darshan Package" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                        Inquire Darshan Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Spiritual Card 3: Rishikesh & Haridwar -->
+            <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1591018653367-9c01498b3320?auto=format&fit=crop&w=800&q=80" alt="Rishikesh Ganga River" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-slate-900/80 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">Spiritual</span>
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">4 Days / 3 Nights</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Haridwar &amp; Rishikesh, UK</h3>
+                        <span class="text-amber-500 font-bold text-lg">₹11,499</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Sacred dip at Har Ki Pauri, Lakshman Jhula, Triveni Ghat Aarti, and peaceful Himalayan ashram retreats.</p>
+                    <a href="#contact" data-package="Haridwar & Rishikesh Spiritual Yatra" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                        Inquire Darshan Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Famous Touring Destinations Subheading -->
+        <div class="flex items-center space-x-3 mb-6">
+            <span class="bg-slate-900 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Famous Touring Places</span>
+            <div class="h-px bg-slate-200 flex-1"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1: Kerala -->
+            <!-- Touring Card 1: Kerala -->
             <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
                 <div class="relative h-64 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80" alt="Munnar and Alleppey, Kerala" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Touring</span>
                     <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">5 Days / 4 Nights</span>
                 </div>
                 <div class="p-6">
@@ -128,35 +210,37 @@
                         <h3 class="text-xl font-bold text-slate-900">Munnar &amp; Alleppey, Kerala</h3>
                         <span class="text-amber-500 font-bold text-lg">₹16,999</span>
                     </div>
-                    <p class="text-slate-500 text-sm mb-4">Lush green tea plantations, misty hills, traditional houseboat stays, and tranquil backwaters.</p>
+                    <p class="text-slate-500 text-sm mb-4">Lush green tea gardens, misty hills, traditional houseboat stays, and serene backwater cruises.</p>
                     <a href="#contact" data-package="Munnar & Alleppey, Kerala" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
                         Inquire Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Card 2: Manali -->
+            <!-- Touring Card 2: Manali -->
             <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
                 <div class="relative h-64 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Manali, Himachal Pradesh" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Touring</span>
                     <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">6 Days / 5 Nights</span>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-bold text-slate-900">Manali &amp; Solang, Himachal</h3>
+                        <h3 class="text-xl font-bold text-slate-900">Manali &amp; Shimla, Himachal</h3>
                         <span class="text-amber-500 font-bold text-lg">₹14,499</span>
                     </div>
-                    <p class="text-slate-500 text-sm mb-4">Snowy mountain peaks, Solang Valley adventures, Atal Tunnel, and cozy riverside resorts.</p>
-                    <a href="#contact" data-package="Manali & Solang, Himachal" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                    <p class="text-slate-500 text-sm mb-4">Snow-covered Rohtang &amp; Solang Valley, Mall Road strolls, Atal Tunnel, and cozy mountain resorts.</p>
+                    <a href="#contact" data-package="Manali & Shimla, Himachal" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
                         Inquire Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Card 3: Rajasthan -->
+            <!-- Touring Card 3: Rajasthan -->
             <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
                 <div class="relative h-64 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80" alt="Jaipur & Udaipur, Rajasthan" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Touring</span>
                     <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">5 Days / 4 Nights</span>
                 </div>
                 <div class="p-6">
@@ -164,7 +248,7 @@
                         <h3 class="text-xl font-bold text-slate-900">Jaipur &amp; Udaipur, Rajasthan</h3>
                         <span class="text-amber-500 font-bold text-lg">₹18,500</span>
                     </div>
-                    <p class="text-slate-500 text-sm mb-4">Majestic royal forts, Lake Pichola boat rides, vibrant bazaars, and authentic Rajasthani hospitality.</p>
+                    <p class="text-slate-500 text-sm mb-4">Majestic Amer Fort, City Palace, Lake Pichola sunset boat rides, and authentic Rajasthani culture.</p>
                     <a href="#contact" data-package="Jaipur & Udaipur, Rajasthan" class="select-package text-amber-600 font-semibold text-sm hover:underline flex items-center">
                         Inquire Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
@@ -173,70 +257,70 @@
         </div>
     </section>
 
-    <!-- Curated Holiday Packages Section -->
+    <!-- Curated Holiday & Yatra Packages Section -->
     <section id="packages" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">All-Inclusive Indian Tours</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Featured Holiday Packages</h2>
-                <p class="text-slate-500 mt-3 max-w-xl mx-auto">Carefully crafted domestic itineraries covering hotels, sightseeing, breakfast, and private transfers.</p>
+                <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">All-Inclusive Domestic Plans</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Featured Spiritual &amp; Touring Packages</h2>
+                <p class="text-slate-500 mt-3 max-w-xl mx-auto">Complete Indian tour itineraries covering verified hotels, temple darshan assistance, meals, and private cabs.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Package 1 -->
+                <!-- Package 1: Spiritual Yatra -->
                 <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 flex flex-col justify-between hover:shadow-xl transition">
                     <div>
-                        <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-4">Heritage &amp; Culture</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Golden Triangle Tour</h3>
-                        <p class="text-slate-500 text-sm mb-4">Delhi • Agra • Jaipur (5 Days / 4 Nights)</p>
-                        <div class="text-3xl font-bold text-slate-900 mb-6">₹15,999 <span class="text-sm font-normal text-slate-400">/ person</span></div>
+                        <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-4">Sacred Yatra</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Kashi – Prayagraj – Ayodhya</h3>
+                        <p class="text-slate-500 text-sm mb-4">5 Days / 4 Nights Spiritual Circuit</p>
+                        <div class="text-3xl font-bold text-slate-900 mb-6">₹15,499 <span class="text-sm font-normal text-slate-400">/ person</span></div>
                         <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> 3-Star &amp; 4-Star Heritage Hotels</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Taj Mahal Sunrise Guided Tour</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Private AC Sedan / SUV Throughout</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Daily Breakfast Included</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Kashi Vishwanath &amp; Ram Mandir Darshan</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Triveni Sangam Holy Dip in Prayagraj</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Clean Family Hotels Near Temples</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Private AC Vehicle &amp; Pure Veg Meals</li>
                         </ul>
                     </div>
-                    <a href="#contact" data-package="Golden Triangle Tour (Delhi-Agra-Jaipur)" class="select-package w-full text-center bg-slate-900 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition">
-                        Book This Package
+                    <a href="#contact" data-package="Kashi - Prayagraj - Ayodhya Yatra (5D/4N)" class="select-package w-full text-center bg-slate-900 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition">
+                        Book Yatra Package
                     </a>
                 </div>
 
-                <!-- Package 2 -->
+                <!-- Package 2: Kashmir Touring -->
                 <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-amber-500 flex flex-col justify-between relative">
-                    <span class="absolute -top-3.5 right-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Most Popular</span>
+                    <span class="absolute -top-3.5 right-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Most Booked</span>
                     <div>
-                        <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-4">Paradise on Earth</span>
+                        <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-4">Scenic Holiday</span>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Magical Kashmir Valley</h3>
-                        <p class="text-slate-500 text-sm mb-4">Srinagar • Gulmarg • Pahalgam (6 Days / 5 Nights)</p>
+                        <p class="text-slate-500 text-sm mb-4">Srinagar • Gulmarg • Pahalgam (6D / 5N)</p>
                         <div class="text-3xl font-bold text-slate-900 mb-6">₹21,499 <span class="text-sm font-normal text-slate-400">/ person</span></div>
                         <ul class="space-y-3 text-sm text-slate-600 mb-8">
                             <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> 1 Night Dal Lake Luxury Houseboat</li>
                             <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Complimentary 1-Hour Shikara Ride</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Breakfast &amp; Dinner (MAP Plan)</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Airport Pickup &amp; Local Sightseeing</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Daily Breakfast &amp; Dinner Included</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Srinagar Airport Pickup &amp; Sightseeing</li>
                         </ul>
                     </div>
                     <a href="#contact" data-package="Magical Kashmir Valley (6D/5N)" class="select-package w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl shadow-md transition">
-                        Book This Package
+                        Book Holiday Package
                     </a>
                 </div>
 
-                <!-- Package 3 -->
+                <!-- Package 3: South India Temple & Leisure -->
                 <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 flex flex-col justify-between hover:shadow-xl transition">
                     <div>
-                        <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-4">Beach &amp; Leisure</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Goa Coastal Escape</h3>
-                        <p class="text-slate-500 text-sm mb-4">North &amp; South Goa (4 Days / 3 Nights)</p>
-                        <div class="text-3xl font-bold text-slate-900 mb-6">₹11,999 <span class="text-sm font-normal text-slate-400">/ person</span></div>
+                        <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-4">South India Special</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Madurai – Rameswaram – Kanyakumari</h3>
+                        <p class="text-slate-500 text-sm mb-4">5 Days / 4 Nights Divine &amp; Coastal Tour</p>
+                        <div class="text-3xl font-bold text-slate-900 mb-6">₹14,999 <span class="text-sm font-normal text-slate-400">/ person</span></div>
                         <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Beachfront Resort Stay with Pool</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> North &amp; South Goa Sightseeing</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Airport / Railway Station Transfers</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Daily Buffet Breakfast</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Meenakshi Amman &amp; Ramanathaswamy Darshan</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Vivekananda Rock &amp; Sunrise Viewpoint</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Comfortable 3-Star Hotel Stays</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2.5"></i> Private AC Cab &amp; Daily Breakfast</li>
                         </ul>
                     </div>
-                    <a href="#contact" data-package="Goa Coastal Escape (4D/3N)" class="select-package w-full text-center bg-slate-900 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition">
+                    <a href="#contact" data-package="Madurai - Rameswaram - Kanyakumari (5D/4N)" class="select-package w-full text-center bg-slate-900 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition">
                         Book This Package
                     </a>
                 </div>
@@ -248,27 +332,27 @@
     <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-14">
             <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">What We Offer</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Our Domestic Travel Services</h2>
-            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Everything you need for a smooth, hassle-free journey anywhere within India.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-1">Our India Travel Services</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Complete end-to-end domestic travel support for families, senior citizens, and groups across India.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Service 1 -->
             <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition text-center border border-slate-100">
                 <div class="w-14 h-14 bg-amber-100 text-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl">
-                    <i class="fa-solid fa-plane-up"></i>
+                    <i class="fa-solid fa-gopuram"></i>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Domestic Flights &amp; Trains</h3>
-                <p class="text-slate-500 text-sm">Best fares on all Indian airlines and confirmed IRCTC railway ticket assistance across all routes.</p>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Temple Darshan &amp; Yatra</h3>
+                <p class="text-slate-500 text-sm">Special senior-friendly pilgrimage planning for Tirupati, Varanasi, Char Dham, Shirdi, and Rameswaram.</p>
             </div>
 
             <!-- Service 2 -->
             <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition text-center border border-slate-100">
                 <div class="w-14 h-14 bg-amber-100 text-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl">
-                    <i class="fa-solid fa-hotel"></i>
+                    <i class="fa-solid fa-train-subway"></i>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Handpicked Hotels &amp; Stays</h3>
-                <p class="text-slate-500 text-sm">Verified hotels, heritage palaces, houseboats, and hill resorts suited for families and couples.</p>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Domestic Flights &amp; Trains</h3>
+                <p class="text-slate-500 text-sm">Best airfares across India and confirmed IRCTC train ticket bookings for seamless city-to-city travel.</p>
             </div>
 
             <!-- Service 3 -->
@@ -277,16 +361,16 @@
                     <i class="fa-solid fa-car-side"></i>
                 </div>
                 <h3 class="text-lg font-bold text-slate-900 mb-2">Outstation Cabs &amp; Tempo</h3>
-                <p class="text-slate-500 text-sm">Clean, air-conditioned sedans, SUVs, and Tempo Travellers with experienced local drivers.</p>
+                <p class="text-slate-500 text-sm">Well-maintained AC sedans, Innova Crysta SUVs, and Tempo Travellers with experienced local drivers.</p>
             </div>
 
             <!-- Service 4 -->
             <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition text-center border border-slate-100">
                 <div class="w-14 h-14 bg-amber-100 text-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl">
-                    <i class="fa-solid fa-headset"></i>
+                    <i class="fa-solid fa-hotel"></i>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">24/7 On-Trip Support</h3>
-                <p class="text-slate-500 text-sm">Dedicated Indian travel coordinators available round-the-clock throughout your journey.</p>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Verified Stays &amp; Resorts</h3>
+                <p class="text-slate-500 text-sm">Clean, family-friendly hotels near major temples, hill stations, beaches, and heritage landmarks.</p>
             </div>
         </div>
     </section>
@@ -298,8 +382,11 @@
                 <!-- Contact Info Side -->
                 <div class="bg-slate-900 text-white p-8 md:col-span-2 flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-bold mb-3">Plan Your Indian Trip</h3>
-                        <p class="text-slate-400 text-sm mb-8">Fill out the form and our ISA Travels domestic specialists will get back to you within 2 hours.</p>
+                        <div class="flex items-center space-x-3 mb-5">
+                            <img src="logo.jpg" alt="IAS Nine Wings Travels" class="h-12 w-12 rounded-full object-contain bg-white p-0.5">
+                            <h3 class="text-xl font-bold leading-snug">IAS Nine Wings Travels</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-8">Share your preferred temple yatra or holiday destination in India, and our specialists will call you within 2 hours.</p>
                         
                         <div class="space-y-4 text-sm">
                             <div class="flex items-start space-x-3">
@@ -312,7 +399,7 @@
                             </div>
                             <div class="flex items-center space-x-3">
                                 <i class="fa-solid fa-envelope text-amber-400"></i>
-                                <span>bookings@isatravels.in</span>
+                                <span>bookings@iasninewingstravels.in</span>
                             </div>
                         </div>
                     </div>
@@ -350,22 +437,22 @@
                                 <input id="email" type="email" required placeholder="rahul@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
                             </div>
                             <div>
-                                <label for="destination" class="block text-sm font-medium text-slate-700 mb-1">Indian Destination / Package</label>
-                                <input id="destination" type="text" placeholder="e.g., Kerala, Kashmir, Goa, Manali" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
+                                <label for="destination" class="block text-sm font-medium text-slate-700 mb-1">Indian Destination / Yatra</label>
+                                <input id="destination" type="text" placeholder="e.g., Varanasi, Tirupati, Kerala, Kashmir" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none">
                             </div>
                         </div>
 
                         <div>
                             <label for="requirements" class="block text-sm font-medium text-slate-700 mb-1">Trip Details &amp; Requirements</label>
-                            <textarea id="requirements" rows="3" placeholder="Tell us about your travel dates, pickup city in India, number of travelers, or special requests..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none"></textarea>
+                            <textarea id="requirements" rows="3" placeholder="Tell us your pickup city in India, travel dates, number of adults/kids/seniors, or special darshan needs..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 focus:outline-none"></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl shadow-md transition">
-                            Send Domestic Inquiry
+                            Send India Travel Inquiry
                         </button>
 
                         <p id="form-feedback" class="hidden text-emerald-600 text-sm font-medium text-center pt-2">
-                            Thank you! Your India travel inquiry has been received by ISA Travels.
+                            Thank you! Your domestic travel inquiry has been received by IAS Nine Wings Travels.
                         </p>
                     </form>
                 </div>
@@ -376,12 +463,12 @@
     <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-10 text-center text-sm">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex items-center justify-center space-x-2 mb-4">
-                <i class="fa-solid fa-plane-departure text-amber-500 text-xl"></i>
-                <span class="text-xl font-bold text-white">ISA <span class="text-amber-500">Travels</span></span>
+            <div class="flex flex-col items-center justify-center mb-4">
+                <img src="logo.jpg" alt="IAS Nine Wings Travels Logo" class="h-14 w-14 rounded-full object-contain bg-white p-1 mb-2">
+                <span class="text-xl font-bold text-white">IAS <span class="text-amber-500">NINE WINGS</span> TRAVELS</span>
             </div>
-            <p class="mb-4">Your trusted specialist for domestic tours and holidays across India.</p>
-            <p>&copy; 2026 ISA Travels India. All rights reserved.</p>
+            <p class="mb-4">Your trusted domestic specialist for spiritual yatras and holiday tours across India.</p>
+            <p>&copy; 2026 IAS Nine Wings Travels. All rights reserved.</p>
         </div>
     </footer>
 
@@ -419,9 +506,9 @@
             });
         }
 
-        // Auto-fill Destination when clicking "Inquire Package" or "Book This Package"
+        // Auto-fill Destination when clicking "Inquire Package" or "Book Package"
         document.querySelectorAll('.select-package').forEach(btn => {
-            btn.addEventListener('click', (e) => {
+            btn.addEventListener('click', () => {
                 const selectedPkg = btn.getAttribute('data-package');
                 if (selectedPkg) {
                     document.getElementById('destination').value = selectedPkg;
