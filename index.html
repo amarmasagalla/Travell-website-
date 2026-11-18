@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISA Travels | Explore the World With Confidence</title>
     <!-- Tailwind CSS -->
-    <script src="https://tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('https://unsplash.com');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -50,7 +50,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none">
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -81,16 +81,16 @@
             <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-4xl mx-auto text-slate-800">
                 <form id="search-form" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
                     <div class="text-left px-2">
-                        <label class="block text-xs font-semibold text-slate-400 uppercase">Destination</label>
-                        <input type="text" placeholder="Where to?" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
+                        <label for="search-destination" class="block text-xs font-semibold text-slate-400 uppercase">Destination</label>
+                        <input id="search-destination" type="text" placeholder="Where to?" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
                     </div>
                     <div class="text-left px-2 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0">
-                        <label class="block text-xs font-semibold text-slate-400 uppercase">Travel Date</label>
-                        <input type="date" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
+                        <label for="search-date" class="block text-xs font-semibold text-slate-400 uppercase">Travel Date</label>
+                        <input id="search-date" type="date" class="w-full font-medium text-slate-700 focus:outline-none mt-1" required>
                     </div>
                     <div class="text-left px-2 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0">
-                        <label class="block text-xs font-semibold text-slate-400 uppercase">Guests</label>
-                        <select class="w-full font-medium text-slate-700 focus:outline-none mt-1 bg-transparent">
+                        <label for="search-guests" class="block text-xs font-semibold text-slate-400 uppercase">Guests</label>
+                        <select id="search-guests" class="w-full font-medium text-slate-700 focus:outline-none mt-1 bg-transparent">
                             <option>1 Adult</option>
                             <option selected>2 Adults</option>
                             <option>Family (2 Adults, 2 Kids)</option>
@@ -120,7 +120,7 @@
             <!-- Card 1 -->
             <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://unsplash.com" alt="Dubai" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">5 Days / 4 Nights</span>
                 </div>
                 <div class="p-6">
@@ -138,7 +138,7 @@
             <!-- Card 2 -->
             <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://unsplash.com" alt="Bali" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">6 Days / 5 Nights</span>
                 </div>
                 <div class="p-6">
@@ -153,11 +153,27 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Card 3 (Completed missing closing tags) -->
             <div class="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition">
                 <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">4 Days / 3 Nights</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Maldives</h3>
+                        <span class="text-amber-500 font-bold text-lg">$999</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Crystal-clear turquoise lagoons, overwater bungalows, and world-class snorkeling.</p>
+                    <a href="#contact" class="text-amber-600 font-semibold text-sm hover:underline flex items-center">
+                        Inquire Package <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-              <!-- Contact & Booking Inquiry Section -->
+    <!-- Contact & Booking Inquiry Section -->
     <section id="contact" class="py-20 bg-amber-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-5">
@@ -184,9 +200,15 @@
                     </div>
 
                     <div class="flex space-x-4 mt-8">
-                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-amber-500 flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -280,4 +302,3 @@
 
 </body>
 </html>
-        
